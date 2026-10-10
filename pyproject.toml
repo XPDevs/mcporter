@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcporter"
+version = "0.1.0"
+description = "Translate Minecraft Java mods into playable Luanti/VoxeLibre/MineClone mods (pure Python, no dependencies)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "XPDevs" }]
+keywords = ["minecraft", "luanti", "minetest", "voxelibre", "mineclone", "mod", "converter", "transpiler"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Games/Entertainment",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/XPDevs/mcporter"
+
+[project.scripts]
+mcporter = "port:main"
+
+[tool.setuptools]
+py-modules = ["port"]
+packages = ["mcporter"]
+
+[tool.setuptools.package-data]
+mcporter = ["*.py"]
